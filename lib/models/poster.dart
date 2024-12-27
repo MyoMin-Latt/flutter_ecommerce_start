@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class Poster {
   String? sId;
   String? posterName;
@@ -8,11 +9,11 @@ class Poster {
 
   Poster(
       {this.sId,
-        this.posterName,
-        this.imageUrl,
-        this.createdAt,
-        this.updatedAt,
-        this.iV});
+      this.posterName,
+      this.imageUrl,
+      this.createdAt,
+      this.updatedAt,
+      this.iV});
 
   Poster.fromJson(Map<String, dynamic> json) {
     sId = json['_id'];
@@ -32,5 +33,10 @@ class Poster {
     data['updatedAt'] = this.updatedAt;
     data['__v'] = this.iV;
     return data;
+  }
+
+  @override
+  String toString() {
+    return 'Poster(sId: $sId, posterName: $posterName, imageUrl: $imageUrl, createdAt: $createdAt, updatedAt: $updatedAt, iV: $iV)';
   }
 }
