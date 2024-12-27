@@ -1,3 +1,4 @@
+import 'package:e_commerce_flutter/utility/extensions.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchBar extends StatefulWidget {
@@ -63,6 +64,7 @@ class CustomSearchBarState extends State<CustomSearchBar> {
               GestureDetector(
                 onTap: () {
                   widget.controller.clear();
+                  context.dataProvider.filteredProducts('');
                   _focusNode.unfocus();
                 },
                 child: const Icon(Icons.close),
