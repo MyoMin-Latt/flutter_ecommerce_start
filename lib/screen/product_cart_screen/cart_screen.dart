@@ -44,7 +44,7 @@ class CartScreen extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(bottom: 15),
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -54,7 +54,7 @@ class CartScreen extends StatelessWidget {
                     ),
                     AnimatedSwitcherWrapper(
                       child: Text(
-                        "\$${100}", //TODO: should complete amount to CartSubTotal
+                        "\$${cartProvider.getCartSubTotal()}",
                         // key: ValueKey<double>(cartProvider.getCartSubTotal()),
                         style: TextStyle(
                           fontSize: 25,
